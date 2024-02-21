@@ -9,7 +9,6 @@ public class SLATriggerHandler {
     
     public static List<Date> getHolidays(){
         List<Date> dateAtWhichWeHaveHoliday = new List<Date>();
-        System.debug('test');
         for(Holiday__c holidayList : [SELECT Id,Holiday_Date__c FROM Holiday__c]){
             dateAtWhichWeHaveHoliday.add(holidayList.Holiday_Date__c);
         }
